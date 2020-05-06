@@ -1,15 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>name</title>
-</head>
-<body>
-  <div class="example">
-    saddasdassad
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>name</title>
+  </head>
+  <body>
+    <div class="popup"></div>
+    <nav class="navigation">
+      <!-- <input type="date" class="date"> -->
+      <button class="btn btn__history">History</button>
+      <button class="btn btn__log-in">Log In</button>
+      <button class="btn btn__log-out">Log Out</button>
+      <button class="btn btn__sign-in">Sign In</button>
+    </nav>
+    <section class="expenses">
+      <div class="col-1-of-2 expenses__list">
+        <div class="expenses__input">
+          <input
+            type="text"
+            class="expenses__input__description"
+            placeholder="Description"
+            id="inputDescr"
+          />
+          <div id="expenses__input__warning">Fill all containers and hit enter</div>
+          <input
+            type="number"
+            class="expenses__input__value"
+            placeholder="Value"
+            id="inputVal"
+          />
+        </div>
+        <!-- <!-- <div class="expenses__item" id="exp-1">
+          <div class="expenses__item__description">Coffee</div>
+          <div class="expenses__item__value">20</div>
+        </div> -->
+        <!-- <div class="expenses__item" id="exp-2">
+          <div class="expenses__item__description">pick</div>
+          <div class="expenses__item__value">25</div>
+        </div> -->
+      </div>
+      <div class="col-1-of-2 expenses__diagram">
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      </div>
+    </section>
+  </body>
 </html>

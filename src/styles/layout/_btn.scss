@@ -1,0 +1,33 @@
+[class*="btn__"] {
+  @include btn-variant(
+    #1e88e5,
+    #64b5f6,
+    #42a5f5,
+    #bbdefb,
+    #e3f2fd,
+    #90caf9,
+    #1976d2
+  );
+  &.btn-flat {
+    @include btn-flat(#1e88e5, #64b5f6, #42a5f5, #bbdefb, #e3f2fd, #90caf9);
+  }
+}
+
+.btn {
+  &__history {
+    position: absolute;
+    right: 18.5rem;
+  }
+  &__log-in {
+    position: absolute;
+    right: 0.5rem;
+  }
+  &__log-out {
+    position: absolute;
+    right: 0.5rem;
+  }
+  &__sign-in {
+    position: absolute;
+    right: 10rem;
+  }
+}

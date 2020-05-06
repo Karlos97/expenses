@@ -1,0 +1,69 @@
+.expenses {
+  width: 100%;
+  height: 100rem;
+  background-color: $background-color;
+
+  &__list {
+    position: relative;
+    top: 10%;
+    left: 3rem;
+    width: 35rem;
+    height: 100%;
+    font-size: 1.7rem;
+    color: $btn-font-color;
+  }
+  &__input {
+    border-radius: 0.2rem;
+    ::placeholder {
+      color: $color-dark-grey-1;
+    }
+    #expenses__input__warning {
+      position: absolute;
+      font-size: 1rem;
+      color: red;
+      left: 1rem;
+      letter-spacing: 0.2rem;
+      // opacity: 1;
+      opacity: 0;
+      padding-bottom: 1rem;
+    }
+
+    &__description {
+      padding: 0.6rem;
+      width: 30rem;
+      margin: 0.3rem;
+      border-radius: inherit;
+    }
+    &__value {
+      padding: 0.6rem;
+      width: 5rem;
+      border-radius: inherit;
+    }
+  }
+  &__item {
+    width: 50rem;
+    box-sizing: border-box;
+    top: 3rem;
+    &__description {
+      position: relative;
+      float: left;
+      left: 1rem;
+      width: 30rem;
+    }
+    &__value {
+      float: right;
+      position: relative;
+      right: 10.5rem;
+      width: 5rem;
+    }
+  }
+
+  &__diagram {
+    position: relative;
+    right: 2%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+  }
+}
+

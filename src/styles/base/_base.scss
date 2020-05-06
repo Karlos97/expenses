@@ -1,17 +1,14 @@
-html{
-font-size: 62.5%;//10px
+html {
+  font-size: 62.5%; //10px
 
+  body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7;
+    //margin: .5rem .5rem .5rem;
 
-
-body {
-
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  //margin: .5rem .5rem .5rem;
-
-  box-sizing: border-box;
-}
-
+    box-sizing: border-box;
+  }
 }
