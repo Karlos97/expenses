@@ -1,4 +1,7 @@
-var chart = new CanvasJS.Chart("chartContainer", {
+export { dps, chart };
+
+let dps = [];
+let chart = new CanvasJS.Chart("chartContainer", {
   // theme: "dark2",
   backgroundColor: "transparent",
   exportFileName: "Doughnut Chart",
@@ -19,21 +22,27 @@ var chart = new CanvasJS.Chart("chartContainer", {
       indexLabelFontColor: "rgba(255, 255, 255, 0.774)",
       innerRadius: 90,
       showInLegend: true,
-      toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+      toolTipContent: "<b>{name}</b>: {y}$  (#percent%)",
+      // toolTipContent: "<b>{name}</b>: {y} PLN (#percent%)",
       indexLabel: "{name} - #percent%",
-      dataPoints: [
-        { y: 450, name: "Food" },
-        { y: 120, name: "Insurance" },
-        { y: 300, name: "Travelling" },
-        { y: 800, name: "Housing" },
-        { y: 150, name: "Education" },
-        { y: 150, name: "Shopping" },
-        { y: 250, name: "Others" },
-      ],
+      // dataPoints: [
+        
+      dataPoints: dps,
+      // [
+      // { y: 90, name: "Food" },
+      // { y: 10, name: "Insurance" },
+      // { y: 300, name: "Travelling" },
+      // { y: 800, name: "Housing" },
+      // { y: 150, name: "Education" },
+      // { y: 150, name: "Shopping" },
+      // { y: 250, name: "Others" },
+      // ],
     },
   ],
 });
-chart.render();
+    // dps.push({ y: 1, name: "asd" });
+    // dps.push({ y: 10, name: "as" });
+    chart.render();
 
 function explodePie(e) {
   if (
@@ -44,5 +53,5 @@ function explodePie(e) {
   } else {
     e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
   }
-  e.chart.render();
+    e.chart.render();
 }

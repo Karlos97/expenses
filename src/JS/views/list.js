@@ -1,4 +1,6 @@
+// import "./chart.js";
 // import { objects } from "../models/objects.js";
+import { dps, chart } from "./chart.js";
 
 export default class list {
   constructor(inputDescr, inputVal, id) {
@@ -7,8 +9,12 @@ export default class list {
     this.id = id;
   }
 
-
   newItem() {
+    // let chart;
+// let dps = [];
+    dps.push({ y: this.val, name: this.descr });
+
+    chart.render();
     // creating item with two divs inside - description and value
     let item = document.createElement("div");
     item.className = "expenses__item";

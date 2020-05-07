@@ -1,6 +1,6 @@
 import list from "./views/list.js";
 import input from "./models/input.js";
-import "./views/chart.js";
+// import "./views/chart.js";
 import { objects } from "./models/objects.js";
 
 objects.inputDescr.addEventListener("keyup", function (event) {
