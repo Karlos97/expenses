@@ -38,7 +38,9 @@ let chart = new CanvasJS.Chart("chartContainer", {
       // { y: 250, name: "Others" },
       // ],
     },
+    
   ],
+  
 });
     // dps.push({ y: 1, name: "asd" });
     // dps.push({ y: 10, name: "as" });

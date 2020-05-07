@@ -13,6 +13,7 @@ objects.inputVal.addEventListener("keyup", function (event) {
     input();
   }
 });
+if((objects.x.addEventListener("onclick"))&&(objects.item.addEventListener("mouseover"))){console.log(`najechales na oba elementy`);}
 
 
 // let elem = new list("abc", "efg", 3);

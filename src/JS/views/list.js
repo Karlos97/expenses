@@ -11,8 +11,10 @@ export default class list {
 
   newItem() {
     // let chart;
-// let dps = [];
+    // let dps = [];
     dps.push({ y: this.val, name: this.descr });
+    console.log(dps);
+    //  chart.data[0].addTo("dataPoints", {y: this.val, name: this.descr});
 
     chart.render();
     // creating item with two divs inside - description and value
@@ -32,15 +34,22 @@ export default class list {
     let itemValueContent = document.createTextNode(this.val);
     itemValue.appendChild(itemValueContent);
 
+    let itemX = document.createElement("div");
+    itemX.className = "expenses__item__delete";
+    let itemXContent = document.createTextNode('x');
+    itemX.appendChild(itemXContent);
+
     // create objects in DOM
     let location = document.querySelector(".expenses__list");
     location.insertAdjacentElement("beforeend", item);
-
     document
       .getElementById(item.id)
       .insertAdjacentElement("beforeend", itemDescr);
     document
       .getElementById(item.id)
       .insertAdjacentElement("beforeend", itemValue);
+
+
+    document.getElementById(item.id).insertAdjacentElement("beforeend", itemX);
   }
 }

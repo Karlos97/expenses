@@ -6,6 +6,7 @@ export const objects = {
            "expenses__item__description"
          ),
          itemVal: document.getElementsByClassName("expenses__item__value"),
+         x: document.getElementsByClassName("expenses__item__delete"),
          list: document.getElementsByClassName("expenses__list"),
          warning: document.getElementById("expenses__input__warning"),
        };

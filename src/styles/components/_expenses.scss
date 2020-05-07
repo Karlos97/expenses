@@ -44,6 +44,7 @@
     width: 50rem;
     box-sizing: border-box;
     top: 3rem;
+    transition: .1s;
     &__description {
       position: relative;
       float: left;
@@ -55,6 +56,19 @@
       position: relative;
       right: 10.5rem;
       width: 5rem;
+    }
+    &__delete{
+      float: right;
+      top: -.5rem;
+      position: relative;
+      right: 5.1rem;
+      opacity: 0;
+    }
+    &:hover{
+font-size: 110%;
+    }
+    &:hover &__delete{
+      opacity: 1;
     }
   }
 
