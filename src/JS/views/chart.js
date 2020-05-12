@@ -21,10 +21,11 @@ let chart = new CanvasJS.Chart("chartContainer", {
       type: "doughnut",
       indexLabelFontColor: "rgba(255, 255, 255, 0.774)",
       innerRadius: 90,
-      showInLegend: true,
+      showInLegend: false,
       toolTipContent: "<b>{name}</b>: {y}$  (#percent%)",
       // toolTipContent: "<b>{name}</b>: {y} PLN (#percent%)",
-      indexLabel: "{name} - #percent%",
+      // indexLabel: "{name} - #percent%",
+      indexLabel: "{name} - #total%",
       // dataPoints: [
         
       dataPoints: dps,

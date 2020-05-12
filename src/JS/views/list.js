@@ -1,5 +1,5 @@
 // import "./chart.js";
-// import { objects } from "../models/objects.js";
+import { objects } from "../models/objects.js";
 import { dps, chart } from "./chart.js";
 
 export default class list {
@@ -10,11 +10,11 @@ export default class list {
   }
 
   newItem() {
-    // let chart;
-    // let dps = [];
     dps.push({ y: this.val, name: this.descr });
-    console.log(dps);
-    //  chart.data[0].addTo("dataPoints", {y: this.val, name: this.descr});
+    // for (let i = 0; i < objects.item.length; i++) {
+    //   // dps.push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
+    //   dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
+    // }
 
     chart.render();
     // creating item with two divs inside - description and value
@@ -36,7 +36,7 @@ export default class list {
 
     let itemX = document.createElement("div");
     itemX.className = "expenses__item__delete";
-    let itemXContent = document.createTextNode('x');
+    let itemXContent = document.createTextNode("x");
     itemX.appendChild(itemXContent);
 
     // create objects in DOM
@@ -49,7 +49,11 @@ export default class list {
       .getElementById(item.id)
       .insertAdjacentElement("beforeend", itemValue);
 
-
     document.getElementById(item.id).insertAdjacentElement("beforeend", itemX);
+
+    // opction delete after click
+    itemX.addEventListener("click", function () {
+      item.remove();
+    });
   }
 }
