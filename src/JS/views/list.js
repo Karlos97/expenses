@@ -11,6 +11,25 @@ export default class list {
   }
 
   newItem() {
+    // dps[this.id] = {
+    //   y: this.val,
+    //   name: this.descr,
+    // };
+    console.log(dps);
+    // chart.data[0].dataPoints=0;
+    // chart.data[0].remove(dataPoints);
+    // chart.data[0].push([dataPoints]);
+
+    chart.data[0].addTo("dataPoints", {
+      y: this.val,
+      name: this.descr,
+    });
+// chart.addTo("data", { dataPoints: dps });
+//       // chart.data[0].set("data",0);//link second dataSeries to second axisY
+// 	chart.render();
+//     // chart.data[0].addTo("dataPoints", dps);
+//     console.log(chart.data[0].dataPoints);
+
     // creating item with two divs inside - description and value
     let item = document.createElement("div");
     item.className = "expenses__item";
@@ -62,17 +81,7 @@ export default class list {
     // chart.data[0].set("dataPoints", []);
     // chart();
     // let chart.data[0].dps = [];
-// chart();
-    dps[this.id] = {
-      y: this.val,
-      name: this.descr,
-    };
-    console.log(dps);
-
-    chart.data[0].addTo("dataPoints", dps);
-    console.log(dps);
-
-    chart.render();
+    // chart();
 
     // dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
 

@@ -2,7 +2,6 @@ export { dps, chart };
 
 let dps = [];
 let chart = new CanvasJS.Chart("chartContainer", {
-  // theme: "dark2",
   backgroundColor: "transparent",
   exportFileName: "Doughnut Chart",
   exportEnabled: true,
