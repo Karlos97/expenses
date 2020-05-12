@@ -9,4 +9,5 @@ export const objects = {
          x: document.getElementsByClassName("expenses__item__delete"),
          list: document.getElementsByClassName("expenses__list"),
          warning: document.getElementById("expenses__input__warning"),
+         id:0,
        };

@@ -1,6 +1,7 @@
 // import "./chart.js";
 import { objects } from "../models/objects.js";
 import { dps, chart } from "./chart.js";
+// import chart from "./chart.js";
 
 export default class list {
   constructor(inputDescr, inputVal, id) {
@@ -10,13 +11,6 @@ export default class list {
   }
 
   newItem() {
-    dps.push({ y: this.val, name: this.descr });
-    // for (let i = 0; i < objects.item.length; i++) {
-    //   // dps.push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
-    //   dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
-    // }
-
-    chart.render();
     // creating item with two divs inside - description and value
     let item = document.createElement("div");
     item.className = "expenses__item";
@@ -55,5 +49,46 @@ export default class list {
     itemX.addEventListener("click", function () {
       item.remove();
     });
+
+    // chart.data[0].remove("dataPoints");
+    // chart.data[0].set("dataPoints",[]);
+    // chart.render();
+    // document.getElementsByClassName("expenses__item__value")[0].innerHTML;
+    // chart.data[0].addTo("dataPoints", {
+    //   y: this.val,
+    //   name: this.descr,
+    // });
+    // dps.push({ y: this.val, name: this.descr });
+    // chart.data[0].set("dataPoints", []);
+    // chart();
+    // let chart.data[0].dps = [];
+// chart();
+    dps[this.id] = {
+      y: this.val,
+      name: this.descr,
+    };
+    console.log(dps);
+
+    chart.data[0].addTo("dataPoints", dps);
+    console.log(dps);
+
+    chart.render();
+
+    // dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
+
+    // for (let i = 0; i <= objects.item.length; i++) {
+    //   if (i === objects.item.length) {
+    //     dps.push({
+    //       y: this.val,
+    //       name: this.descr,
+    //     });
+    //   } else {
+    //     dps.push({
+    //       y: Number(objects.itemVal[i].innerHTML),
+    //       name: objects.itemDescr[i].innerHTML,
+    //     });
+    //   }
+    //   // dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
+    // }
   }
 }

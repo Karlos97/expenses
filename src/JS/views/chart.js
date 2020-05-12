@@ -19,6 +19,8 @@ let chart = new CanvasJS.Chart("chartContainer", {
   data: [
     {
       type: "doughnut",
+      // yValueFormatString: "$####.00", 
+      
       indexLabelFontColor: "rgba(255, 255, 255, 0.774)",
       innerRadius: 90,
       showInLegend: false,
@@ -27,7 +29,7 @@ let chart = new CanvasJS.Chart("chartContainer", {
       // indexLabel: "{name} - #percent%",
       indexLabel: "{name} - #total%",
       // dataPoints: [
-        
+
       dataPoints: dps,
       // [
       // { y: 90, name: "Food" },
@@ -39,9 +41,7 @@ let chart = new CanvasJS.Chart("chartContainer", {
       // { y: 250, name: "Others" },
       // ],
     },
-    
   ],
-  
 });
     // dps.push({ y: 1, name: "asd" });
     // dps.push({ y: 10, name: "as" });

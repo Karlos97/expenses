@@ -24,9 +24,11 @@ export default function input() {
     let elem = new list(
       objects.inputDescr.value,
       objects.inputVal.value,
-      objects.item.length
+      // objects.item.length/////
+      objects.id
     );
     elem.newItem();
+    objects.id+=1;
     // add listener for new item to easy delete it
     // Array.from(objects.x).forEach((el1) => {
     //   el1.addEventListener("click", function () {
