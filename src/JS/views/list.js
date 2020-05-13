@@ -1,6 +1,6 @@
 // import "./chart.js";
 import { objects } from "../models/objects.js";
-import { dps, chart } from "./chart.js";
+import { dps, chart } from "./init.js";
 // import chart from "./chart.js";
 
 export default class list {
@@ -10,25 +10,14 @@ export default class list {
     this.id = id;
   }
 
-  newItem() {
-    // dps[this.id] = {
-    //   y: this.val,
-    //   name: this.descr,
-    // };
-    console.log(dps);
-    // chart.data[0].dataPoints=0;
-    // chart.data[0].remove(dataPoints);
-    // chart.data[0].push([dataPoints]);
-
-    chart.data[0].addTo("dataPoints", {
+  addingNewItem() {
+    chart.data[0].dataPoints[this.id] = {
       y: this.val,
       name: this.descr,
-    });
-// chart.addTo("data", { dataPoints: dps });
-//       // chart.data[0].set("data",0);//link second dataSeries to second axisY
-// 	chart.render();
-//     // chart.data[0].addTo("dataPoints", dps);
-//     console.log(chart.data[0].dataPoints);
+    };
+    chart.render();
+
+    console.log(objects.dps);
 
     // creating item with two divs inside - description and value
     let item = document.createElement("div");
@@ -66,38 +55,12 @@ export default class list {
 
     // opction delete after click
     itemX.addEventListener("click", function () {
+      // console.log(chart.data[0].dataPoints);
+      // console.log(item.id.charAt(4));
+      chart.data[0].dataPoints.splice(item.id.charAt(4), 1);
+      chart.render();
+      // console.log(chart.data[0].dataPoints);
       item.remove();
     });
-
-    // chart.data[0].remove("dataPoints");
-    // chart.data[0].set("dataPoints",[]);
-    // chart.render();
-    // document.getElementsByClassName("expenses__item__value")[0].innerHTML;
-    // chart.data[0].addTo("dataPoints", {
-    //   y: this.val,
-    //   name: this.descr,
-    // });
-    // dps.push({ y: this.val, name: this.descr });
-    // chart.data[0].set("dataPoints", []);
-    // chart();
-    // let chart.data[0].dps = [];
-    // chart();
-
-    // dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
-
-    // for (let i = 0; i <= objects.item.length; i++) {
-    //   if (i === objects.item.length) {
-    //     dps.push({
-    //       y: this.val,
-    //       name: this.descr,
-    //     });
-    //   } else {
-    //     dps.push({
-    //       y: Number(objects.itemVal[i].innerHTML),
-    //       name: objects.itemDescr[i].innerHTML,
-    //     });
-    //   }
-    //   // dps[i].push({ y: objects.itemVal[i], name: objects.itemDescr[i] });
-    // }
   }
 }

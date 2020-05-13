@@ -8,4 +8,5 @@ export const objects = {
   list: document.getElementsByClassName("expenses__list"),
   warning: document.getElementById("expenses__input__warning"),
   id: 0,
+  dps:[],
 };

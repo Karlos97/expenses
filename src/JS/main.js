@@ -1,16 +1,17 @@
 import list from "./views/list.js";
-import input from "./models/input.js";
-// import "./views/chart.js";
+import userExpensesInput from "./models/userExpensesInput.js";
+import init from "./views/init.js";
+import "./views/init.js";
 import { objects } from "./models/objects.js";
-
-objects.inputDescr.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    input();
+// window.onload = init();
+objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
+  if (onEnterEventHandler.key === "Enter") {
+    userExpensesInput();
   }
 });
-objects.inputVal.addEventListener("keyup", function (event) {
-  if (event.key === "Enter") {
-    input();
+objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
+  if (onEnterEventHandler.key === "Enter") {
+    userExpensesInput();
   }
 });
 
