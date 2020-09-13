@@ -21,5 +21,6 @@ export default function userExpensesInput() {
     );
     creatingExpensesList.addingNewItem();
     objects.id += 1;
+
   }
 }

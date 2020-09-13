@@ -1,8 +1,5 @@
-// import "./chart.js";
-import { objects } from "../models/objects.js";
-import { dps, chart } from "./init.js";
-// import chart from "./chart.js";
-
+import { chart} from "./chart.js";
+import { totalValue, addData, removeData} from "../models/functions.js";
 export default class list {
   constructor(inputDescr, inputVal, id) {
     this.descr = inputDescr;
@@ -11,15 +8,8 @@ export default class list {
   }
 
   addingNewItem() {
-    chart.data[0].dataPoints[this.id] = {
-      y: this.val,
-      name: this.descr,
-    };
-    chart.render();
+    addData(chart, this.descr, this.val, this.id);
 
-    console.log(objects.dps);
-
-    // creating item with two divs inside - description and value
     let item = document.createElement("div");
     item.className = "expenses__item";
     item.id = `exp-${this.id}`;
@@ -41,7 +31,6 @@ export default class list {
     let itemXContent = document.createTextNode("x");
     itemX.appendChild(itemXContent);
 
-    // create objects in DOM
     let location = document.querySelector(".expenses__list");
     location.insertAdjacentElement("beforeend", item);
     document
@@ -53,14 +42,14 @@ export default class list {
 
     document.getElementById(item.id).insertAdjacentElement("beforeend", itemX);
 
-    // opction delete after click
+    totalValue();
+
+    let remDescr = this.descr;
+    let remVal = this.val;
     itemX.addEventListener("click", function () {
-      // console.log(chart.data[0].dataPoints);
-      // console.log(item.id.charAt(4));
-      chart.data[0].dataPoints.splice(item.id.charAt(4), 1);
-      chart.render();
-      // console.log(chart.data[0].dataPoints);
+      removeData(chart, remDescr, remVal);
       item.remove();
+      totalValue();
     });
   }
 }

@@ -5,10 +5,10 @@
 
   &__list {
     position: relative;
-    top: 10%;
-    left: 3rem;
+    top: 10rem;
+    left: 5rem;
     width: 35rem;
-    height: 100%;
+    height: inherit;
     font-size: 1.7rem;
     color: $btn-font-color;
   }
@@ -23,7 +23,6 @@
       color: red;
       left: 1rem;
       letter-spacing: 0.2rem;
-      // opacity: 1;
       opacity: 0;
       padding-bottom: 1rem;
     }
@@ -38,6 +37,16 @@
       padding: 0.6rem;
       width: 5rem;
       border-radius: inherit;
+    }
+    &__total{
+      color: $btn-font-color;
+      position: absolute;
+      width: 8rem;
+      height: 8rem;
+      top: 11rem;
+      right: 17.5rem;
+      font-size: 1.6rem;
+      text-align: center;
     }
   }
   &__item {
@@ -74,10 +83,10 @@ font-size: 110%;
 
   &__diagram {
     position: relative;
-    right: 2%;
-    top: 10%;
-    width: 100%;
-    height: 100%;
+    left: 2rem;
+    top: 10rem;
+    width: 35rem;
+    height: inherit;
   }
 }
 

@@ -1,17 +1,42 @@
-import list from "./views/list.js";
 import userExpensesInput from "./models/userExpensesInput.js";
-import init from "./views/init.js";
-import "./views/init.js";
+import { chart } from "./views/chart.js";
 import { objects } from "./models/objects.js";
 // window.onload = init();
+// objects.btns.forEach((el) => {
+// el.addEventListener("click", () => {
+//   alert("Option switched off.");
+// });
+// console.log(el);
+// for (let item of objects.btns) {
+//   item.addEventListener("click", () => {
+//     alert("Option switched off.");
+//   });
+// }
+// [].forEach.call(objects.btns, (el)=>{
+//   console.log(el)
+// })
 objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
+    for (let i = 0; i < objects.item.length; i++) {
+      
+      if (objects.item[i].id !== `exp-${i}`) {
+        objects.item[i].id = `exp-${i}`;
+      }
+      objects.id = i + 1;
+    }
     userExpensesInput();
   }
 });
 objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
+    for (let i = 0; i < objects.item.length; i++) {
+      if (objects.item[i].id !== `exp-${i}`) {
+        objects.item[i].id = `exp-${i}`;
+      }
+      objects.id = i + 1;
+    }
     userExpensesInput();
+  
   }
 });
 
@@ -30,7 +55,6 @@ objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
 //     console.log(`kliknales na element ${el1.parentElement.id}`);
 //   });
 // });
-
 
 // let elem = new list("abc", "efg", 3);
 // console.log(elem.returnn);

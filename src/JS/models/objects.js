@@ -8,5 +8,11 @@ export const objects = {
   list: document.getElementsByClassName("expenses__list"),
   warning: document.getElementById("expenses__input__warning"),
   id: 0,
-  dps:[],
+  dps: [],
+  btnHistory: document.getElementsByClassName("btn__history")[0],
+  btnSignIn: document.getElementsByClassName("btn__sign-in")[0],
+  btnLogIn: document.getElementsByClassName("btn__log-in")[0],
+  btnLogOut: document.getElementsByClassName("btn__log-out")[0],
+  btns: document.getElementsByClassName("btn"),
+  total: document.getElementById("total__exp"),
 };

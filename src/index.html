@@ -12,7 +12,6 @@
   <body>
     <div class="popup"></div>
     <nav class="navigation">
-      <!-- <input type="date" class="date"> -->
       <button class="btn btn__history">History</button>
       <button class="btn btn__log-in">Log In</button>
       <button class="btn btn__log-out">Log Out</button>
@@ -27,7 +26,9 @@
             placeholder="Description"
             id="inputDescr"
           />
-          <div id="expenses__input__warning">Fill all containers and hit enter</div>
+          <div id="expenses__input__warning">
+            Fill all containers and hit enter
+          </div>
           <input
             type="number"
             class="expenses__input__value n"
@@ -35,21 +36,13 @@
             id="inputVal"
           />
         </div>
-        <!-- <div class="expenses__item" id="exp-1">
-          <div class="expenses__item__description">Coffee</div>
-          <div class="expenses__item__value">20</div>
-          <div class="expenses__item__delete">x</div>
-        </div>
-        <div class="expenses__item" id="exp-2">
-          <div class="expenses__item__description">pick</div>
-          <div class="expenses__item__value">25</div>
-          <div class="expenses__item__delete">x</div>
-        </div> -->
       </div>
       <div class="col-1-of-2 expenses__diagram">
-        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
-        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+       <canvas id="myChart"></canvas>
+       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+      <div class="expenses__input__total" id= "total__exp"></div>
       </div>
+      <!-- <div class="expenses__input__total">TOTAL &nbsp; 9475.5</div> -->
     </section>
   </body>
 </html>
