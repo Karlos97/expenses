@@ -1,5 +1,5 @@
 .expenses {
-  width: 100%;
+  width: 186.4rem;
   height: 100rem;
   background-color: $background-color;
 
@@ -41,11 +41,11 @@
     &__total{
       color: $btn-font-color;
       position: absolute;
-      width: 8rem;
+      width: 20rem;
       height: 8rem;
-      top: 11rem;
-      right: 17.5rem;
-      font-size: 1.6rem;
+      top: -9rem;
+      right: 11.5rem;
+      font-size: 6rem;
       text-align: center;
     }
   }
@@ -83,7 +83,7 @@ font-size: 110%;
 
   &__diagram {
     position: relative;
-    left: 2rem;
+    left: 14.2rem;
     top: 10rem;
     width: 35rem;
     height: inherit;

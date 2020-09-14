@@ -15,6 +15,8 @@ let chart = new Chart(ctx, {
     ],
   },
   options: {
+    // width:"800px",
+    aspectRatio:1,
     legend: {
       labels: {
         fontColor: "#FFF",
