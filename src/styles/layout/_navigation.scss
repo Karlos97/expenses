@@ -5,4 +5,10 @@
   background-color: $color-dark-grey-1;
   display: flex;
   justify-content: flex-end;
+  &__history--input{
+    width: 10rem;
+    margin-right: .4em;
+    border-radius: .3rem;
+    border-width: .1rem;
+  }
 }
