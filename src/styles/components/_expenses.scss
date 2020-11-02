@@ -1,0 +1,114 @@
+.expenses {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--bg {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background-color: $background-color;
+    z-index: -1;
+  }
+  &__something {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  &__summary {
+    height: 10rem;
+    width: 65rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    font-size: 6rem;
+    &--text {
+      color: $btn-font-color;
+      width: 42rem;
+      height: 8rem;
+      text-align: center;
+      margin: 0;
+      align-self: flex-start;
+    }
+    &--value {
+      color: $btn-font-color;
+      width: 20rem;
+      height: 8rem;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    top: 10rem;
+    left: 5rem;
+    width: 35rem;
+    height: inherit;
+    font-size: 1.7rem;
+    color: $btn-font-color;
+  }
+  &__input {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-radius: 0.2rem;
+    margin-left: 2rem;
+    ::placeholder {
+      color: $color-dark-grey-1;
+    }
+    #expenses__input__warning {
+    }
+
+    &__description {
+      height: 2rem;
+      width: 30rem;
+      margin-right: 0.3rem;
+      border-radius: 0.5rem;
+    }
+    &__value {
+      height: 2rem;
+      width: 5rem;
+      border-radius: 0.5rem;
+    }
+    &__item {
+      width: 40rem;
+      box-sizing: border-box;
+      top: 3rem;
+      transition: 0.1s;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-left: 3rem;
+
+      &--description {
+        width: 31rem;
+      }
+      &--value {
+      }
+      &--delete {
+        font-size: 1.3rem;
+        opacity: 0;
+        margin-left: 1rem;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-0.3rem);
+          font-size: 90%;
+          font-weight: bold;
+        }
+      }
+      &:hover {
+        font-size: 110%;
+      }
+      &:hover &--delete {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__diagram {
+    left: 14.2rem;
+    top: 10rem;
+    width: 35rem;
+    height: inherit;
+  }
+}
