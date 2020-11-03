@@ -11,23 +11,23 @@ export default class list {
     addData(chart, this.descr, this.val, this.id);
 
     let item = document.createElement("div");
-    item.className = "expenses__item";
+    item.className = "expenses__input__item";
     item.id = `exp-${this.id}`;
     let itemContent = document.createTextNode("");
     item.appendChild(itemContent);
 
     let itemDescr = document.createElement("div");
-    itemDescr.className = "expenses__item__description";
+    itemDescr.className = "expenses__input__item--description";
     let itemDescrContent = document.createTextNode(this.descr);
     itemDescr.appendChild(itemDescrContent);
 
     let itemValue = document.createElement("div");
-    itemValue.className = "expenses__item__value";
+    itemValue.className = "expenses__input__item--value";
     let itemValueContent = document.createTextNode(this.val);
     itemValue.appendChild(itemValueContent);
 
     let itemX = document.createElement("div");
-    itemX.className = "expenses__item__delete";
+    itemX.className = "expenses__input__item--delete";
     let itemXContent = document.createTextNode("x");
     itemX.appendChild(itemXContent);
 

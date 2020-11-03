@@ -1,10 +1,46 @@
 .expenses {
-  width: 186.4rem;
-  height: 100rem;
-  background-color: $background-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--bg {
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    background-color: $background-color;
+    z-index: -1;
+  }
+  &__something {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+  }
+  &__summary {
+    height: 10rem;
+    width: 65rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    font-size: 6rem;
+    &--text {
+      color: $btn-font-color;
+      // width: 42rem;
+      width: 53rem;
+      height: 8rem;
+      text-align: center;
+      margin: 0;
+      align-self: flex-start;
+    }
+    &--value {
+      color: $btn-font-color;
+      width: 20rem;
+      height: 8rem;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  }
 
   &__list {
-    position: relative;
     top: 10rem;
     left: 5rem;
     width: 35rem;
@@ -13,80 +49,74 @@
     color: $btn-font-color;
   }
   &__input {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
     border-radius: 0.2rem;
+    margin-left: 2rem;
     ::placeholder {
       color: $color-dark-grey-1;
     }
     #expenses__input__warning {
-      position: absolute;
-      font-size: 1rem;
-      color: red;
-      left: 1rem;
-      letter-spacing: 0.2rem;
-      opacity: 0;
-      padding-bottom: 1rem;
     }
 
     &__description {
-      padding: 0.6rem;
+      height: 2rem;
       width: 30rem;
-      margin: 0.3rem;
-      border-radius: inherit;
+      margin-right: 0.3rem;
+      border-radius: 0.5rem;
     }
     &__value {
-      padding: 0.6rem;
+      height: 2rem;
       width: 5rem;
-      border-radius: inherit;
+      border-radius: 0.5rem;
     }
-    &__total{
-      color: $btn-font-color;
-      position: absolute;
-      width: 20rem;
-      height: 8rem;
-      top: -9rem;
-      right: 11.5rem;
-      font-size: 6rem;
-      text-align: center;
+    &__item {
+      width: 40rem;
+      box-sizing: border-box;
+      top: 3rem;
+      transition: 0.1s;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin-left: 3rem;
+
+      &--description {
+        width: 31rem;
+      }
+      &--value {
+      }
+      &--delete {
+        font-size: 1.3rem;
+        opacity: 0;
+        margin-left: 1rem;
+        cursor: pointer;
+        &:hover {
+          transform: translateY(-0.3rem);
+          font-size: 90%;
+          font-weight: bold;
+        }
+      }
+      &:hover {
+        font-size: 110%;
+      }
+      &:hover &--delete {
+        opacity: 1;
+      }
     }
-  }
-  &__item {
-    width: 50rem;
-    box-sizing: border-box;
-    top: 3rem;
-    transition: .1s;
-    &__description {
-      position: relative;
-      float: left;
-      left: 1rem;
-      width: 30rem;
-    }
-    &__value {
-      float: right;
-      position: relative;
-      right: 10.5rem;
-      width: 5rem;
-    }
-    &__delete{
-      float: right;
-      top: -.5rem;
-      position: relative;
-      right: 5.1rem;
-      opacity: 0;
-    }
-    &:hover{
-font-size: 110%;
-    }
-    &:hover &__delete{
-      opacity: 1;
-    }
+&__warning{
+  position: absolute;
+  color: red;
+  left: 2.5rem;
+  opacity: 0;
+  font-size: 1.3rem;
+}
   }
 
   &__diagram {
-    position: relative;
     left: 14.2rem;
     top: 10rem;
     width: 35rem;
     height: inherit;
   }
 }
-

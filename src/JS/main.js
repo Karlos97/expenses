@@ -1,20 +1,7 @@
 import userExpensesInput from "./models/userExpensesInput.js";
-import { chart } from "./views/chart.js";
 import { objects } from "./models/objects.js";
-// window.onload = init();
-// objects.btns.forEach((el) => {
-// el.addEventListener("click", () => {
-//   alert("Option switched off.");
-// });
-// console.log(el);
-// for (let item of objects.btns) {
-//   item.addEventListener("click", () => {
-//     alert("Option switched off.");
-//   });
-// }
-// [].forEach.call(objects.btns, (el)=>{
-//   console.log(el)
-// })
+import {cleanInput} from "./models/functions.js"
+
 objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
     for (let i = 0; i < objects.item.length; i++) {
@@ -25,8 +12,10 @@ objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
       objects.id = i + 1;
     }
     userExpensesInput();
+    cleanInput()
   }
 });
+
 objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
     for (let i = 0; i < objects.item.length; i++) {
@@ -36,33 +25,11 @@ objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
       objects.id = i + 1;
     }
     userExpensesInput();
-  
+    cleanInput()
   }
 });
-
-// Array.from(objects.item).forEach((el) => {
-//   el.addEventListener("mouseover", function () {
-//     console.log(`najechales na element ${el.id}`);
-//   });
-// });
-// Array.from(objects.x).forEach((el1) => {
-//   el1.addEventListener("click", function () {
-//     console.log(`kliknales na element ${el1.parentElement.id}`);
-//   });
-// });
-// Array.from(objects.x).forEach((el1) => {
-//   el1.addEventListener("click", function () {
-//     console.log(`kliknales na element ${el1.parentElement.id}`);
-//   });
-// });
-
-// let elem = new list("abc", "efg", 3);
-// console.log(elem.returnn);
-
-//write description and value -->
-
-// add elements to the list
-// add elemets to pie chart
-// count some things ?? if yes
-//count total value, percent of this element
-// check if same object exist and sum it ?? Meybe
+// after creating new list (making new id) 
+// create save option, change history - add option NOW
+// if we already opened a save from history, we can overwrite it by pressing save
+// we can delete everything
+// choosing date from history will load expenses from that time

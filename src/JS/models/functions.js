@@ -10,6 +10,10 @@ export function totalValue(){
     objects.total.innerHTML = `${totalVal}`;
 }
 
+export function cleanInput(){
+  inputDescr.value = ""
+  inputVal.value = ""
+}
 
 export function addData(chart, label, data, id) {
   chart.data.labels.push(label);

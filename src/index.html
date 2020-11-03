@@ -10,39 +10,62 @@
     <title>name</title>
   </head>
   <body>
-    <div class="popup"></div>
+    <!-- <div class="popup"></div> -->
     <nav class="navigation">
-      <button class="btn btn__history">History</button>
-      <button class="btn btn__log-in">Log In</button>
-      <button class="btn btn__log-out">Log Out</button>
-      <button class="btn btn__sign-in">Sign In</button>
+      <!-- <button class="btn btn__history">History</button> -->
+      <input
+        class="navigation__history--input"
+        list="navigation__history--list"
+        id="navigation__history--input"
+        name="history--input"
+        placeholder="History"
+      />
+      <datalist id="navigation__history--list">
+        <option value="Chocolate"></option>
+        <option value="Coconut"></option>
+        <option value="Mint"></option>
+        <option value="Strawberry"></option>
+        <option value="Vanilla"></option>
+      </datalist>
+
+      <!-- <div class="btn__col"> -->
+      <button class="btn btn__log-in">Save</button>
+      <!-- <button class="btn btn__log-out">Log Out</button> -->
+      <!-- </div> -->
+      <button class="btn btn__sign-in">Delete</button>
     </nav>
     <section class="expenses">
-      <div class="col-1-of-2 expenses__list">
-        <div class="expenses__input">
-          <input
-            type="text"
-            class="expenses__input__description n"
-            placeholder="Description"
-            id="inputDescr"
-          />
-          <div id="expenses__input__warning">
+      <div class="expenses--bg"></div>
+      <div class="expenses__summary">
+        <p class="expenses__summary--text">Total expenses:</p>
+        <div class="expenses__summary--value" id="total__exp">0</div>
+      </div>
+      <div class="expenses__something">
+        <div class="col-1 expenses__list">
+          <div class="expenses__input">
+            <input
+              type="text"
+              class="expenses__input__description n"
+              placeholder="Description"
+              id="inputDescr"
+            />
+            <!-- <div id="expenses__input__warning"></div> -->
+            <input
+              type="number"
+              class="expenses__input__value n"
+              placeholder="Value"
+              id="inputVal"
+            />
+          </div>
+          <div id="expenses__input__warning" class="expenses__input__warning">
             Fill all containers and hit enter
           </div>
-          <input
-            type="number"
-            class="expenses__input__value n"
-            placeholder="Value"
-            id="inputVal"
-          />
+        </div>
+        <div class="col-1 expenses__diagram">
+          <canvas id="myChart"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         </div>
       </div>
-      <div class="col-1-of-2 expenses__diagram">
-       <canvas id="myChart"></canvas>
-       <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-      <div class="expenses__input__total" id= "total__exp"></div>
-      </div>
-      <!-- <div class="expenses__input__total">TOTAL &nbsp; 9475.5</div> -->
     </section>
   </body>
 </html>
