@@ -15,6 +15,7 @@ objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
     cleanInput()
   }
 });
+
 objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
     for (let i = 0; i < objects.item.length; i++) {
