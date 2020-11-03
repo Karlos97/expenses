@@ -1,7 +1,7 @@
 export const objects = {
   inputDescr: document.getElementById("inputDescr"),
   inputVal: document.getElementById("inputVal"),
-  item: document.getElementsByClassName("expenses__item"),
+  item: document.getElementsByClassName("expenses__input__item"),
   itemDescr: document.getElementsByClassName("expenses__item__description"),
   itemVal: document.getElementsByClassName("expenses__input__item--value"),
   x: document.getElementsByClassName("expenses__item__delete"),

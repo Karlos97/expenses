@@ -15,6 +15,7 @@ objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
     cleanInput()
   }
 });
+
 objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
     for (let i = 0; i < objects.item.length; i++) {
@@ -27,3 +28,8 @@ objects.inputVal.addEventListener("keyup", function (onEnterEventHandler) {
     cleanInput()
   }
 });
+// after creating new list (making new id) 
+// create save option, change history - add option NOW
+// if we already opened a save from history, we can overwrite it by pressing save
+// we can delete everything
+// choosing date from history will load expenses from that time
