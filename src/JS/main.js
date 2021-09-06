@@ -5,7 +5,6 @@ import list from "./views/list.js";
 import { chart } from "./views/chart.js";
 
 let cookieList = init();
-// console.log(cookieList)
 
 objects.inputDescr.addEventListener("keyup", function (onEnterEventHandler) {
   if (onEnterEventHandler.key === "Enter") {
@@ -60,8 +59,6 @@ objects.btnDelete.addEventListener("click", function () {
   clearData(objects.item,chart)
   totalValue()
   location.reload();
-  // window.location.reload(true)
-  // window.location.reload(false); 
 });
 
 objects.btnSave.addEventListener("click", function () {
@@ -76,13 +73,6 @@ objects.btnSave.addEventListener("click", function () {
         objects.item[i].childNodes[2].textContent,
       ];
     }
-// cookieList.forEach( el=>{
-//   if(el[1][0] = list){
-//     console.log(`lista ${el[1][0]} jest taka sama jak lista ${list}`)
-//     sameList = true;
-//   }else sameList = false;
-// })
-// if(!sameList){
     objects.historyList.innerHTML += `<option value=${now} />`;
     objects.historyInput.value = "Now";
     storeData(list, now, 365);
@@ -90,45 +80,8 @@ objects.btnSave.addEventListener("click", function () {
     location.reload();
 
 }
-  // }
 
 });
-
-//now:
-// choosing we delete list and prepare like for init
-// now shows up after typing new expenses when we have not opened history log
-
-//after adding new element to the list history change on "now"
-// after creating new list (making new id)
-// create save option, change history - add option NOW
-// if we already opened a save from history, we can overwrite it by pressing save
-// we can delete everything
-// choosing date from history will load expenses from that time
-
-// let date = new Date(Date.now() + 86400e3);
-// date = date.toUTCString();
-// document.cookie = "user=John; expires=" + date dodać 12 miesiecy;
-// document.cookie = "user=John; max-age=3600"; mozna tutaj w sekundachw rzucic 12 miesiecy
-
-//READ
-
-// function showCookie(name) {
-//   if (document.cookie !== "") {
-//       const cookies = document.cookie.split(/; */);
-
-//       for (let i=0; i<cookies.length; i++) {
-//           const cookiePart = cookies[i].split("=");
-//           const cookieName = cookiesPart[0];
-//           const cookieVal = cookiesPart[1];
-//           if (cookieName === decodeURIComponent(name)) {
-//               return decodeURIComponent(cookieVal);
-//           }
-//       }
-//   }
-//   return false;
-// }
-
-// DELTE
 
 
 

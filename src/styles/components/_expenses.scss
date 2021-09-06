@@ -57,8 +57,6 @@
     ::placeholder {
       color: $color-dark-grey-1;
     }
-    #expenses__input__warning {
-    }
 
     &__description {
       height: 2rem;
@@ -104,13 +102,13 @@
         opacity: 1;
       }
     }
-&__warning{
-  position: absolute;
-  color: red;
-  left: 2.5rem;
-  opacity: 0;
-  font-size: 1.3rem;
-}
+    &__warning {
+      position: absolute;
+      color: red;
+      left: 2.5rem;
+      opacity: 0;
+      font-size: 1.3rem;
+    }
   }
 
   &__diagram {
